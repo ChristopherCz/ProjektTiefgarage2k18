@@ -1,0 +1,33 @@
+public class Fahrzeuganzahl {
+    protected int fahrzeuganzahl;
+    protected int belegteReservParkplätze;
+    
+    public int freieStudentenParkplätze;
+    
+    final int maxStudentenParkplatz=70;      //geschätzt
+
+    protected void fahrzeugplus(){
+        fahrzeuganzahl ++;
+    }
+    
+    protected void fahrzeugminus(){
+        fahrzeuganzahl--;
+    }
+    
+        protected void reservParkplätzeplus(){
+        belegteReservParkplätze ++;
+    }
+    
+    protected void reservParkplätzeminus(){
+        belegteReservParkplätze--;
+    }
+    
+    public int getFreieStudentenParkplätze() {
+        
+        
+        freieStudentenParkplätze = maxStudentenParkplatz - (fahrzeuganzahl - belegteReservParkplätze);
+        
+        return freieStudentenParkplätze;
+    }
+    
+}
