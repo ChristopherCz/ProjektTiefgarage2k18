@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+   <h:head>
+      
+        <title>Freie Plätze Tiefgarage</title>
+
+       
+    </h:head>
+    
+    <h:body>
+        <font face="arial">
+            
+        <img src="https://gruenden.wuerzburg.de/wp-content/uploads/2018/02/fhws-845x321.jpg" />
+         <center> <script type="text/javascript">
+        var d=new Date();
+        document.write(d.toLocaleString());
+        </script>
+        <input type="button" value=" aktualisieren " onClick="window.location.reload() " style="float: right"> </input>
+        </center>
+         <br/>
+          <br/>
+           <br/>
+        
+        <script src="https://apis.google.com/js/platform.js" async="defer"></script>
+        <meta name="google-signin-client_id" content="fhws.tiefgarage.apps.googleusercontent.com"></meta>
+        <div class="g-signin2" data-onsuccess="onSignIn" style="float: right"> </div>
+           <br/>
+            <br/>
+             <br/>
+        <a href="#" onclick="signOut();" style="float: right">Sign out</a>
+        
+<script>
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
+</script>
+        
+        
+       <br/>
+       <br/>
+       <br/>
+         <H1 Align="center"> Freie Plätze Tiefgarage </H1>
+         <br/>
+         <br/>
+        <br/>
+   
+        
+        <center> <font size="5"> Aktuell sind </font> </center>
+ 
+   <div style= "color: #FF0000; background: #FFCC99; margin: 50px; padding: 30px; border-style: groove; border-color: #C0C0C0; border-width: 10px; border-radius: 1px;"> <center> <font size="7"> <b> 56734567890 </b> </font> </center> </div>
+   <br/>
+  
+   
+  <center> <font size="5"> Parkplätze frei </font> </center>
+   </font> 
+   <br/>
+   <br/>
+   
+   
+   <img src="https://gruenden.wuerzburg.de/wp-content/uploads/2018/02/fhws-845x321.jpg" width="436" height="116"  alt="Logo von FHWS"/>
+       
+    </h:body>
+</html>
