@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <style>
+        body{
+            background-color: whitesmoke;
+        }
+    </style>
+    <h:head>
+        <title>Freie Plätze Tiefgarage</title>
+    </h:head>
+    <h:body>
+        <center>  <header>
+            <font size= "5"  face="Arial"> Freie Plätze des Parkdecks der FHWS am SHL </font>
+        </header>
+        <br/>
+        <br/>
+        <font face="Arial">  Aktuell sind </font>
+        <br/> 
+        <br/>
+        <br/>
+        <br/>
+            <p style="width:100px;padding:2px;border: 2px solid #ff7f4c;">
+                <font face ="Arial" size="6"> <b>  45 </b> </font>
+            </p>
+           
+        <br/>
+   
+        <font face ="Arial"> Parkplätze frei </font>
+        <br/>
+        <br/>
+            <img src="https://gruenden.wuerzburg.de/wp-content/uploads/2018/02/fhws-845x321.jpg" width="436" height="116"  alt="Logo von FHWS"/>
+        <br/>
+        <br/>
+        <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=igfmsrjj5ig6n9abp7f2chmsqg%40group.calendar.google.com&amp;color=%23865A5A&amp;ctz=Europe%2FBrussels" style="border-width:0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
+        </center>
+    </h:body>
+</html>
+
