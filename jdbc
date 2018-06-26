@@ -1,0 +1,22 @@
+//JDBC in Netbeans/Eclipse einfügen (Libraries)
+
+public class IOManager{
+Connection connection;
+ 
+public IOManager() {
+ 
+}
+ 
+public boolean connectToMysql(String host, String database, String user, String passwd){
+try{
+Class.forName("com.mysql.jdbc.Driver").newInstance();
+String connectionCommand = "jdbc:mysql://"+194.95.221.105+"/"+garage2018+"?user="+Fascher+"&password="+Fascher2018;
+connection = DriverManager.getConnection(connectionCommand);
+return true;
+ 
+}catch (Exception ex){
+System.out.println("false");
+return false;
+}
+}
+}
