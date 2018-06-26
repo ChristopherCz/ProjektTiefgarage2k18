@@ -1,0 +1,46 @@
+package ParkDeck;
+
+
+public class Fahrzeuganzahl {
+    protected static int fahrzeuganzahl;
+    protected static int belegteReservParkplätze;
+    
+    public static int freieStudentenParkplätze;
+    
+    String parkpl = "43";
+
+    public String getParkpl() {
+        return parkpl;
+    }
+
+    public void setParkpl(String parkpl) {
+        this.parkpl = parkpl;
+    }
+    
+    final static int maxStudentenParkplatz=70;      //geschätzt
+
+    public static  void fahrzeugplus(){
+        fahrzeuganzahl ++;
+    }
+    
+    public static void fahrzeugminus(){
+        fahrzeuganzahl--;
+    }
+    
+        public static  void reservParkplätzeplus(){
+        belegteReservParkplätze ++;
+    }
+    
+    public static void reservParkplätzeminus(){
+        belegteReservParkplätze--;
+    }
+    
+    public static int getFreieStudentenParkplätze() {
+        
+        
+        freieStudentenParkplätze = maxStudentenParkplatz - (fahrzeuganzahl - belegteReservParkplätze);
+        
+        return freieStudentenParkplätze;
+    }
+}
+    
