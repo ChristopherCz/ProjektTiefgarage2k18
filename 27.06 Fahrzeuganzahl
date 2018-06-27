@@ -1,0 +1,44 @@
+package ParkDeck;
+
+
+public class Fahrzeuganzahl {
+    protected static int fahrzeuganzahl;
+    protected static int belegteReservParkplätze;
+    
+    public static int freieStudentenParkplätze;
+    
+    final static int maxStudentenParkplatz=70;      //geschätzt
+    
+
+    public static  void fahrzeugplus(){
+        fahrzeuganzahl ++;
+    }
+    
+    public static void fahrzeugminus(){ 
+        if (fahrzeuganzahl >0)          //wenn die Fahrzeugeanzahl auf den Parkplatz gößer als 0 ist
+        fahrzeuganzahl--;
+    }
+    
+        public static  void reservParkplätzeplus(){
+        belegteReservParkplätze ++;
+    }
+    
+    public static void reservParkplätzeminus(){
+        if (fahrzeuganzahl >0)          //wenn die Fahrzeugeanzahl auf dem Reservierten Parkplatz gößer als 0 ist
+        belegteReservParkplätze--;
+    }
+    
+    public static int getFreieStudentenParkplätze() {
+        
+        
+        freieStudentenParkplätze = maxStudentenParkplatz - (fahrzeuganzahl - belegteReservParkplätze);
+        
+        if (freieStudentenParkplätze <=0)
+        {
+            return 0;
+        }
+        
+        return freieStudentenParkplätze;
+    }
+}
+    
