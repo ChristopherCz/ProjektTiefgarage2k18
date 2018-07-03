@@ -17,7 +17,7 @@ public class ConnectDB {
 		
 		Class.forName("com.mysql.jdbc.Driver").newInstance();
 		connection = DriverManager.getConnection(url, username, password);
-		PreparedStatement ps = connection.prepareStatement("INSERT Into `tiefgarage`.`freieparkplaetze`(`Anzahl`);");
+		PreparedStatement ps = connection.prepareStatement("INSERT Into tiefgarage(Anzahl) VALUES (?)");
 		
 		int status = ps.executeUpdate();
 		
