@@ -1,3 +1,5 @@
+/* global Notification */
+
 Notification.requestPermission(function(){});
 
 function ask_for_permission()
@@ -5,17 +7,19 @@ function ask_for_permission()
         Notification.requestPermission(function(){});
         //setInterval(send, 100)
       }
-      setTimeout(send, 10000)
+      setTimeout(send, 10000);
       
       function send()
       {
           var test = Number(document.getElementById('zahl').innerText);
-          if(test === 0){
-              new Notification(document.getElementById('title').value, {
-                body: "Ich hasse Aileeeeeeeeeeeeeeeeeeeeeeeeeeeeeen!!",
+          if(test===0){
+              new Notification("Alarm", {
+                body: "Es sind zurzeit keine Parkplätze mehr frei!",
                 icon: "https://gruenden.wuerzburg.de/wp-content/uploads/2018/02/fhws-845x321.jpg"
                 
                 }
               );
           }
+         
       }
+
