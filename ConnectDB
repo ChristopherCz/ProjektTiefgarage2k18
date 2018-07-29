@@ -4,7 +4,8 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class ConnectDB {
+
+public class insertdb {
 		
 	static Connection connection = null;
 	static String databaseName = "tiefgarage";
@@ -13,11 +14,12 @@ public class ConnectDB {
 	static String username = "root";
 	static String password = "garage2k18";
 	
-	public static void main(String[] args) throws InstantiationException, IllegalAccessException, ClassNotFoundException, SQLException {
+	public static void main(String[] args) throws SQLException, InstantiationException, IllegalAccessException, ClassNotFoundException {
 		
 		Class.forName("com.mysql.jdbc.Driver").newInstance();
 		connection = DriverManager.getConnection(url, username, password);
-		PreparedStatement ps = connection.prepareStatement("INSERT Into tiefgarage(Anzahl) VALUES ("+ getFreieParkplätze() +"););
+		String insert = "INSERT Into tiefgarage(Anzahl, Uhrzeit, Datum) VALUES (+ get.FreieParkplätze() +,CURTIME(),CURDATE())";
+		PreparedStatement ps = connection.prepareStatement(insert);
 		
 		int status = ps.executeUpdate();
 		
@@ -26,5 +28,4 @@ public class ConnectDB {
 			System.out.println("Record was inserted");
 		}
 	}
-
 }
