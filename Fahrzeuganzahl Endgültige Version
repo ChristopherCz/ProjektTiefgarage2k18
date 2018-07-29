@@ -44,5 +44,11 @@ public class Fahrzeuganzahl {
         
         return freieStudentenParkplätze;
     }
+    
+    public int getAvgDay(int day){
+        return new AvgBean().showOne(day);
+       
+    }
+    
 }
     
