@@ -1,4 +1,4 @@
-package tiefgarage;
+package parkdeck;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class ConnectDB {
 		
 	static Connection connection = null;
-	static String databaseName = "";
+	static String databaseName = "tiefgarage";
 	static String url = "jdbc:mysql://localhost:3306/" + databaseName;
 	
 	static String username = "root";
@@ -17,7 +17,7 @@ public class ConnectDB {
 		
 		Class.forName("com.mysql.jdbc.Driver").newInstance();
 		connection = DriverManager.getConnection(url, username, password);
-		PreparedStatement ps = connection.prepareStatement("INSERT Into tiefgarage(Anzahl) VALUES (?)");
+		PreparedStatement ps = connection.prepareStatement("INSERT Into tiefgarage(Anzahl) VALUES ("+ getFreieParkplätze() +"););
 		
 		int status = ps.executeUpdate();
 		
